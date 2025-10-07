@@ -1,7 +1,7 @@
 {
-  "name": "progenx-interaktif-kitaplar",
+  "name": "progenx-books",
   "version": "1.0.0",
-  "description": "İnteraktif Çocuk Kitapları - Progenx",
+  "description": "İnteraktif Çocuk Kitapları",
   "private": true,
   "scripts": {
     "dev": "cd next && npm run dev",
@@ -15,16 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rdvnktlms/Progenx.git"
+    "url": "https://github.com/ardaturak/books.git"
   },
   "keywords": [
     "nextjs",
     "react",
     "typescript",
-    "interaktif-kitaplar",
-    "progenx",
-    "children-books"
+    "children-books",
+    "interactive"
   ],
-  "author": "Progenx Team",
+  "author": "Arda Turak",
   "license": "MIT"
 }
