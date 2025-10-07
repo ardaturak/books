@@ -1,0 +1,30 @@
+{
+  "name": "progenx-interaktif-kitaplar",
+  "version": "1.0.0",
+  "description": "İnteraktif Çocuk Kitapları - Progenx",
+  "private": true,
+  "scripts": {
+    "dev": "cd next && npm run dev",
+    "build": "cd next && npm run build",
+    "start": "cd next && npm run start",
+    "install-deps": "cd next && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdvnktlms/Progenx.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "interaktif-kitaplar",
+    "progenx",
+    "children-books"
+  ],
+  "author": "Progenx Team",
+  "license": "MIT"
+}

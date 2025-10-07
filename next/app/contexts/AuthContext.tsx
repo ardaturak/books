@@ -42,7 +42,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       { id: 2, name: "Elif Kaya", email: "elif@example.com", password: "123456" },
       { id: 3, name: "Mehmet Demir", email: "mehmet@example.com", password: "123456" },
       { id: 4, name: "Zeynep Öz", email: "zeynep@example.com", password: "123456" },
-      { id: 5, name: "Can Arslan", email: "can@example.com", password: "123456" }
+      { id: 5, name: "Can Arslan", email: "can@example.com", password: "123456" },
+      { id: 6, name: "Progenx Admin", email: "progenx@gmail.com", password: "123" }
     ];
 
     // API çağrısını simüle et
@@ -77,6 +78,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           break;
         case 'mehmet@example.com': // Kitapsız
           userBooks = [];
+          break;
+        case 'progenx@gmail.com': // Progenx Admin - Tüm kitaplar
+          userBooks = [
+            { id: 'oyunlarla-satranc', title: 'Oyunlarla Satranç', purchaseDate: new Date().toISOString() },
+            { id: 'hava-olaylari', title: 'Hava Olayları', purchaseDate: new Date().toISOString() },
+            { id: 'benim-kucuk-deneylerim', title: 'Benim Küçük Deneylerim', purchaseDate: new Date().toISOString() },
+            { id: 'atalarimizdan-dersler', title: 'Atalarımızdan Dersler', purchaseDate: new Date().toISOString() },
+            { id: 'tatilde-50-macera', title: 'Tatilde 50 Macera', purchaseDate: new Date().toISOString() }
+          ];
           break;
         default:
           // Diğer hesaplar için mevcut localStorage'dan al

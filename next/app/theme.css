@@ -28,7 +28,7 @@ body::before {
 
 :root{
   --bg:#ffffff; --text:#222; --muted:#6b7280; --card:#ffffff;
-  --primary:rgb(205, 23, 25); --primary-600:rgb(180, 20, 22); --green:#79d16b; --sky:#7fd3ff; --pink:#ff89c1;
+  --primary:rgb(220, 60, 65); --primary-600:rgb(200, 50, 55); --green:#79d16b; --sky:#7fd3ff; --pink:#ff89c1;
   --board-light:#e6f4d6; --board-dark:#bfe2a6; --ring:rgba(205, 23, 25, 0.1); --radius:14px;
 }
 *{box-sizing:border-box} html,body{height:100%}
@@ -48,13 +48,14 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 .user-btn{background:white;border:none;color:var(--text);padding:8px 16px;border-radius:12px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all 0.2s ease;font-size:inherit;font-family:inherit;min-width:200px}
 .user-btn:hover{background:white;transform:translateY(-1px)}
 .user-btn:hover .dropdown-arrow{transform:rotate(180deg)}
-.user-btn:hover + .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+/* Hover ile dropdown açılmasını kaldırdık - sadece tıklama ile açılsın */
 .user-avatar{width:32px;height:32px;background:rgb(0, 118, 128);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:white}
 .user-info{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
 .user-name{font-weight:600;font-size:14px;color:var(--text)}
 .user-status{font-size:12px;color:var(--muted)}
 .dropdown-arrow{font-size:10px;transition:transform 0.2s ease;margin-left:auto}
 .dropdown-menu{position:absolute;top:100%;right:0;background:white;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.15);border:1px solid #e2e8f0;min-width:280px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s ease;z-index:1000;margin-top:8px;overflow:hidden}
+.dropdown-menu.show{opacity:1;visibility:visible;transform:translateY(0)}
 .dropdown-header{padding:20px;background:linear-gradient(135deg,#f8fafc,#e2e8f0);display:flex;align-items:center;gap:12px;border-bottom:1px solid #e2e8f0}
 .user-avatar-large{width:48px;height:48px;background:rgb(0, 118, 128);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:white}
 .user-details{display:flex;flex-direction:column;gap:4px}
@@ -68,7 +69,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 .item-icon{font-size:18px;width:20px;text-align:center}
 .item-text{flex:1;font-weight:500;font-size:14px}
 .item-badge{background:var(--primary);color:white;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600}
-.hero{background:linear-gradient(135deg,rgb(205, 23, 25),rgb(180, 20, 22));border:1px solid #ffe4c7;padding:24px;border-radius:20px;margin:10px 0 24px;display:grid;gap:12px;text-align:center;color:white}
+.hero{background:linear-gradient(135deg,rgb(220, 60, 65),rgb(200, 50, 55));border:1px solid #ffe4c7;padding:24px;border-radius:20px;margin:10px 0 24px;display:grid;gap:12px;text-align:center;color:white}
 .hero h2{font-size:28px;margin:0;color:white}
 .hero p{font-size:16px;margin:0;color:white}
 
@@ -77,7 +78,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 .book-cover{position:relative;display:flex;justify-content:center}
 .book-image{width:100%;max-width:280px;height:auto;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.2);transition:transform 0.3s ease;object-fit:cover;aspect-ratio:3/4}
 .book-image:hover{transform:scale(1.02)}
-.book-badge{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,rgb(205, 23, 25),rgb(180, 20, 22));color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,0.2);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+.book-badge{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,rgb(220, 60, 65),rgb(200, 50, 55));color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,0.2);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
 .book-info h3{font-size:24px;margin:0 0 8px;color:#1a202c;font-weight:800}
 .author{font-size:16px;margin:0 0 16px;color:#4a5568;font-weight:600}
 .description{font-size:15px;margin:0 0 20px;color:#2d3748;line-height:1.6}
@@ -217,7 +218,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 
 /* Ana Sayfa Stilleri */
 .hero-section {
-  background: linear-gradient(135deg, rgb(205, 23, 25) 0%, rgb(180, 20, 22) 100%);
+  background: linear-gradient(135deg, rgb(220, 60, 65) 0%, rgb(200, 50, 55) 100%);
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -312,7 +313,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(90deg, rgb(220, 60, 65), rgb(200, 50, 55));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -460,7 +461,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 
 .buy-button {
   width: 100%;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 14px 20px;
@@ -701,7 +702,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 
 /* Demo System Styles */
 .book-demo-container {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -852,7 +853,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 }
 
 .guest-restriction {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   padding: 40px;
   text-align: center;
@@ -943,7 +944,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 }
 
 .key-verification-card {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   padding: 30px;
   border-radius: 16px;
@@ -1323,7 +1324,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 
 .admin-nav {
   width: 250px;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   padding: 20px 0;
   position: fixed;
@@ -1425,7 +1426,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid rgb(205, 23, 25);
+  border-top: 4px solid rgb(220, 60, 65);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 20px;
@@ -1448,7 +1449,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   padding: 20px;
 }
 
@@ -1519,7 +1520,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 
 .form-group input:focus {
   outline: none;
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
@@ -1533,7 +1534,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 }
 
 .login-btn {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 14px 24px;
@@ -1584,7 +1585,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   margin-bottom: 40px;
   border-radius: 24px;
@@ -1664,7 +1665,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 .book-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-top: 3px solid rgb(205, 23, 25);
+  border-top: 3px solid rgb(220, 60, 65);
 }
 
 .book-cover {
@@ -1804,7 +1805,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 
 .buy-button {
   flex: 1;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 12px 20px;
@@ -2242,7 +2243,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 
 .edit-profile-btn {
   width: 100%;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 12px 20px;
@@ -2329,7 +2330,7 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 }
 
 input:checked + .slider {
-  background-color: rgb(205, 23, 25);
+  background-color: rgb(220, 60, 65);
 }
 
 input:checked + .slider:before {
@@ -2520,7 +2521,7 @@ input:checked + .slider:before {
 }
 
 .read-btn, .buy-btn {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 8px 16px;
@@ -2791,7 +2792,7 @@ input:checked + .slider:before {
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
@@ -2832,16 +2833,16 @@ input:checked + .slider:before {
 
 .genre-checkbox input[type="checkbox"]:checked + span {
   font-weight: 600;
-  color: rgb(205, 23, 25);
+  color: rgb(220, 60, 65);
 }
 
 .genre-checkbox:has(input[type="checkbox"]:checked) {
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   background: #e0e7ff;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 12px 24px;
@@ -2926,7 +2927,7 @@ input:checked + .slider:before {
 
 .filter-select:focus {
   outline: none;
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
@@ -2946,7 +2947,7 @@ input:checked + .slider:before {
 }
 
 .book-category {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
@@ -2992,7 +2993,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgb(205, 23, 25) 0%, rgb(180, 20, 22) 100%);
+  background: linear-gradient(135deg, rgb(220, 60, 65) 0%, rgb(200, 50, 55) 100%);
   padding: 2rem;
 }
 
@@ -3016,7 +3017,7 @@ input:checked + .slider:before {
   margin: 0 auto 1rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid rgb(205, 23, 25);
+  border: 4px solid rgb(220, 60, 65);
 }
 
 .admin-logo img {
@@ -3065,13 +3066,13 @@ input:checked + .slider:before {
 
 .login-form input:focus {
   outline: none;
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 .login-btn {
   width: 100%;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -3207,8 +3208,8 @@ input:checked + .slider:before {
 }
 
 .nav-item.active {
-  color: rgb(205, 23, 25);
-  border-bottom-color: rgb(205, 23, 25);
+  color: rgb(220, 60, 65);
+  border-bottom-color: rgb(220, 60, 65);
   background: #f0f4ff;
 }
 
@@ -3233,7 +3234,7 @@ input:checked + .slider:before {
 }
 
 .add-btn {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -3274,7 +3275,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   border-radius: 12px;
 }
 
@@ -3337,7 +3338,7 @@ input:checked + .slider:before {
 }
 
 .book-rank {
-  background: rgb(205, 23, 25);
+  background: rgb(220, 60, 65);
   color: white;
   width: 30px;
   height: 30px;
@@ -3423,8 +3424,8 @@ input:checked + .slider:before {
 
 .action-btn:hover {
   background: #e0e7ff;
-  border-color: rgb(205, 23, 25);
-  color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
+  color: rgb(220, 60, 65);
   transform: translateY(-2px);
 }
 
@@ -3573,7 +3574,7 @@ input:checked + .slider:before {
 }
 
 .play-btn {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
 }
 
@@ -3739,7 +3740,7 @@ input:checked + .slider:before {
 }
 
 .generate-btn {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -3779,7 +3780,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   border-radius: 12px;
 }
 
@@ -3813,7 +3814,7 @@ input:checked + .slider:before {
 }
 
 .item-rank {
-  background: rgb(205, 23, 25);
+  background: rgb(220, 60, 65);
   color: white;
   width: 30px;
   height: 30px;
@@ -3849,7 +3850,7 @@ input:checked + .slider:before {
 
 .bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(90deg, rgb(220, 60, 65), rgb(200, 50, 55));
   border-radius: 4px;
   transition: width 0.3s ease;
 }
@@ -3871,7 +3872,7 @@ input:checked + .slider:before {
 }
 
 .bar {
-  background: linear-gradient(180deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(180deg, rgb(220, 60, 65), rgb(200, 50, 55));
   border-radius: 4px 4px 0 0;
   min-height: 20px;
   width: 100%;
@@ -3901,7 +3902,7 @@ input:checked + .slider:before {
 }
 
 .game-rank {
-  background: rgb(205, 23, 25);
+  background: rgb(220, 60, 65);
   color: white;
   width: 30px;
   height: 30px;
@@ -4028,7 +4029,7 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   border-radius: 10px;
 }
 
@@ -4081,8 +4082,8 @@ input:checked + .slider:before {
 
 .export-btn:hover {
   background: #e0e7ff;
-  border-color: rgb(205, 23, 25);
-  color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
+  color: rgb(220, 60, 65);
   transform: translateY(-2px);
 }
 
@@ -4339,7 +4340,7 @@ input:checked + .slider:before {
 
 .score-item span {
   font-weight: 600;
-  color: rgb(205, 23, 25);
+  color: rgb(220, 60, 65);
   font-size: 1.1rem;
 }
 
@@ -4401,7 +4402,7 @@ input:checked + .slider:before {
 }
 
 .play-again-btn {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
 }
 
@@ -4471,7 +4472,7 @@ input:checked + .slider:before {
   width: 40px;
   height: 40px;
   border: 4px solid #e2e8f0;
-  border-top: 4px solid rgb(205, 23, 25);
+  border-top: 4px solid rgb(220, 60, 65);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -4494,12 +4495,12 @@ input:checked + .slider:before {
 }
 
 .file-upload-area:hover {
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   background: #f0f4ff;
 }
 
 .file-upload-area.drag-active {
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   background: #e0e7ff;
   transform: scale(1.02);
 }
@@ -4580,7 +4581,7 @@ input:checked + .slider:before {
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   transition: width 0.3s ease;
 }
 
@@ -4708,7 +4709,7 @@ input:checked + .slider:before {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
 }
 
 .metric-card:hover {
@@ -4839,12 +4840,12 @@ input:checked + .slider:before {
 
 .form-group input:focus {
   outline: none;
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 .auth-btn {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -4889,7 +4890,7 @@ input:checked + .slider:before {
 }
 
 .auth-footer a {
-  color: rgb(205, 23, 25);
+  color: rgb(220, 60, 65);
   text-decoration: none;
   font-weight: 600;
 }
@@ -7423,7 +7424,7 @@ input:checked + .slider:before {
 }
 
 .topic-card {
-  background: linear-gradient(135deg, rgb(205, 23, 25) 0%, rgb(180, 20, 22) 100%);
+  background: linear-gradient(135deg, rgb(220, 60, 65) 0%, rgb(200, 50, 55) 100%);
   color: white;
   border-radius: 16px;
   padding: 2rem;
@@ -8389,11 +8390,11 @@ input:checked + .slider:before {
 
 .key-input:focus {
   outline: none;
-  border-color: rgb(205, 23, 25);
+  border-color: rgb(220, 60, 65);
 }
 
 .key-button {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   border: none;
   padding: 12px 24px;
@@ -8462,7 +8463,7 @@ input:checked + .slider:before {
 }
 
 .login-button {
-  background: linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22));
+  background: linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55));
   color: white;
   text-decoration: none;
   padding: 12px 24px;

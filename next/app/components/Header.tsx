@@ -1,10 +1,28 @@
 "use client";
 import { useAuth } from '../contexts/AuthContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Header() {
   const { user, logout } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
+
+  // Dropdown'ı dışına tıklandığında kapat
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.user-dropdown')) {
+        setShowDropdown(false);
+      }
+    };
+
+    if (showDropdown) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [showDropdown]);
 
   return (
     <header className="site-header">
@@ -23,7 +41,10 @@ function Header() {
           <div className="user-dropdown">
             <button 
               className="user-btn"
-              onClick={() => setShowDropdown(!showDropdown)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowDropdown(!showDropdown);
+              }}
               style={{ minWidth: 'auto', padding: '8px 16px' }}
             >
               <div className="user-info">
@@ -37,7 +58,10 @@ function Header() {
               <span className="dropdown-arrow">▼</span>
             </button>
             {showDropdown && (
-            <div className="dropdown-menu">
+            <div 
+              className={`dropdown-menu ${showDropdown ? 'show' : ''}`}
+              onClick={(e) => e.stopPropagation()}
+            >
               {user ? (
                 <>
                   <div className="dropdown-header">

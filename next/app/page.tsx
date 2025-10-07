@@ -138,7 +138,7 @@ export default function Page(){
     <>
       {/* Hero Section */}
       <section style={{
-        background: 'linear-gradient(135deg, rgb(205, 23, 25) 0%, rgb(180, 20, 22) 100%)',
+        background: 'linear-gradient(135deg, rgb(220, 60, 65) 0%, rgb(200, 50, 55) 100%)',
         color: 'white',
         padding: '80px 20px',
         textAlign: 'center',
@@ -346,7 +346,7 @@ export default function Page(){
                     position: 'absolute',
                     top: '15px',
                     right: '15px',
-                    background: 'linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22))',
+                    background: 'linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55))',
                     color: 'white',
                     padding: '6px 12px',
                     borderRadius: '20px',
@@ -360,7 +360,7 @@ export default function Page(){
                     position: 'absolute',
                     top: '15px',
                     right: '15px',
-                    background: 'linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22))',
+                    background: 'linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55))',
                     color: 'white',
                     padding: '6px 12px',
                     borderRadius: '20px',
@@ -522,7 +522,7 @@ export default function Page(){
                   <button 
                     style={{
                       flex: 1,
-                      background: book.comingSoon ? '#f3f4f6' : 'linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22))',
+                      background: book.comingSoon ? '#f3f4f6' : 'linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55))',
                       color: book.comingSoon ? '#9ca3af' : 'white',
                       border: 'none',
                       padding: '12px 20px',
@@ -585,7 +585,7 @@ export default function Page(){
           href="/oyunlar/test-demo" 
           style={{
             display: 'inline-block',
-            background: 'linear-gradient(135deg, rgb(205, 23, 25), rgb(180, 20, 22))',
+            background: 'linear-gradient(135deg, rgb(220, 60, 65), rgb(200, 50, 55))',
             color: 'white',
             padding: '12px 24px',
             borderRadius: '8px',
